@@ -375,10 +375,10 @@ class DS1(ControlSurface):
 		self._main_modes = ToggledModesComponent(name = 'MainModes')
 		self._main_modes.add_mode('Main', [self._mixer.main_layer, self.main_mode_message],)
 		self._main_modes.add_mode('Select', [self._mixer.select_layer, self.select_mode_message],)
-		self._main_modes.add_mode('Clips', [self._session.clips_layer, self.clip_mode_message],)
+		# self._main_modes.add_mode('Clips', [self._session.clips_layer, self.clip_mode_message],)
 		self._main_modes.layer = Layer(priority = 4, toggle_button = self._grid[2][2])
 		self._main_modes.set_enabled(True)
-		self._main_modes.selected_mode = 'Main'
+		self._main_modes.selected_mode = 'Select'
 	
 
 	def _notify_descriptors(self):
