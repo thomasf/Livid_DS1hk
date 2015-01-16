@@ -334,7 +334,7 @@ class DS1(ControlSurface):
 		self._clip_creator.name = 'ClipCreator'
 		self._recorder = SessionRecordingComponent(self._clip_creator, ViewControlComponent())
 		self._recorder.set_enabled(True)
-		self._recorder.layer = Layer(automation_button = self._grid[1][2], record_button  = self._grid[2][1],)
+		self._recorder.layer = Layer(automation_button = self._grid[2][2], record_button  = self._grid[2][1],)
 	
 
 	def _setup_m4l_interface(self):
@@ -376,7 +376,7 @@ class DS1(ControlSurface):
 		self._main_modes.add_mode('Main', [self._mixer.main_layer, self.main_mode_message],)
 		self._main_modes.add_mode('Select', [self._mixer.select_layer, self.select_mode_message],)
 		# self._main_modes.add_mode('Clips', [self._session.clips_layer, self.clip_mode_message],)
-		self._main_modes.layer = Layer(priority = 4, toggle_button = self._grid[2][2])
+		self._main_modes.layer = Layer(priority = 4, toggle_button = self._grid[1][2])
 		self._main_modes.set_enabled(True)
 		self._main_modes.selected_mode = 'Select'
 	
