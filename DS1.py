@@ -306,7 +306,7 @@ class DS1(ControlSurface):
 		self._session = DS1SessionComponent(num_tracks = 8, num_scenes = 1, auto_name = True, enable_skinning = True)
 		self._session.set_offsets(0, 0)	 
 		self._session.set_mixer(self._mixer)
-		self._session.layer = Layer(track_select_dial = ComboElement(self._encoder[1], modifiers = [self._encoder_button[1]]), scene_bank_up_button = self._grid[0][1], scene_bank_down_button = self._grid[0][2], scene_launch_buttons = self._grid_matrix.submatrix[1:2, 1:2])
+		self._session.layer = Layer(track_select_dial = ComboElement(self._encoder[1], modifiers = [self._encoder_button[1]]))
 		self._session.clips_layer = AddLayerMode(self._session, Layer(clip_launch_buttons = self._top_buttons, stop_track_clip_buttons = self._bottom_buttons))
 		self.set_highlighting_session_component(self._session)
 		self._session._do_show_highlight()
