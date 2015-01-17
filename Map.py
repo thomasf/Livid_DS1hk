@@ -40,7 +40,7 @@ class DS1Colors:
 
 	class ModeButtons:
 		Main = LividRGB.WHITE
-		Select = LividRGB.RED
+		Select = LividRGB.OFF
 		Clips = LividRGB.GREEN
 	
 
